@@ -26,7 +26,9 @@ RUN caddy-builder \
     github.com/caddyserver/nginx-adapter \
     github.com/caddyserver/ntlm-transport \
     github.com/mholt/caddy-dynamicdns \
-    github.com/mholt/caddy-webdav
+    github.com/mholt/caddy-webdav \
+    github.com/hairyhenderson/caddy-teapot-module \
+    github.com/hairyhenderson/caddyprom
         
 FROM caddy:latest
 
