@@ -9,7 +9,7 @@ RUN caddy-builder \
     github.com/caddy-dns/route53 \
     github.com/greenpau/caddy-auth-forms \
     github.com/greenpau/caddy-auth-jwt \
-    github.com/greenpau/caddy-auth-saml
+    github.com/greenpau/caddy-auth-saml \
     github.com/abiosoft/caddy-exec \
     github.com/abiosoft/caddy-hmac \
     github.com/abiosoft/caddy-json-parse \
