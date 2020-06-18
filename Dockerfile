@@ -15,7 +15,16 @@ RUN caddy-builder \
     github.com/abiosoft/caddy-json-parse \
     github.com/abiosoft/caddy-json-schema \
     github.com/abiosoft/caddy-named-routes \
-    github.com/abiosoft/caddy-yaml
+    github.com/abiosoft/caddy-yaml \
+    github.com/caddyserver/cache-handler \
+    github.com/caddyserver/circuitbreaker \
+    github.com/caddyserver/cue-adapter \
+    github.com/caddyserver/format-encoder \
+    github.com/caddyserver/forwardproxy \
+    github.com/caddyserver/json5-adapter \
+    github.com/caddyserver/jsonc-adapter \
+    github.com/caddyserver/nginx-adapter \
+    github.com/caddyserver/ntlm-transport
         
 FROM caddy:latest
 
