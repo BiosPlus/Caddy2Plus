@@ -6,7 +6,10 @@ FROM caddy:builder AS builder
 RUN caddy-builder \
     github.com/caddy-dns/cloudflare \
     github.com/caddy-dns/gandi \
-    github.com/caddy-dns/route53
+    github.com/caddy-dns/route53 \
+    github.com/greenpau/caddy-auth-forms \
+    github.com/greenpau/caddy-auth-jwt \
+    github.com/greenpau/caddy-auth-saml
         
 FROM caddy:latest
 
