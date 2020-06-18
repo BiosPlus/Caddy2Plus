@@ -10,6 +10,12 @@ RUN caddy-builder \
     github.com/greenpau/caddy-auth-forms \
     github.com/greenpau/caddy-auth-jwt \
     github.com/greenpau/caddy-auth-saml
+    github.com/abiosoft/caddy-exec \
+    github.com/abiosoft/caddy-hmac \
+    github.com/abiosoft/caddy-json-parse \
+    github.com/abiosoft/caddy-json-schema \
+    github.com/abiosoft/caddy-named-routes \
+    github.com/abiosoft/caddy-yaml
         
 FROM caddy:latest
 
