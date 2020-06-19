@@ -28,6 +28,7 @@ RUN caddy-builder \
     github.com/greenpau/caddy-auth-saml \
     github.com/hairyhenderson/caddy-teapot-module \
     github.com/hairyhenderson/caddyprom \
+    github.com/iamd3vil/caddy_yaml_adapter \
     github.com/mholt/caddy-dynamicdns \
     github.com/mholt/caddy-webdav \
     github.com/nwhirschfeld/client_cert_matcher \
