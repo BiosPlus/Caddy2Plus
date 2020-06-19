@@ -22,7 +22,8 @@ RUN caddy-builder \
     github.com/caddyserver/forwardproxy \
     github.com/caddyserver/json5-adapter \
     github.com/caddyserver/jsonc-adapter \
-    github.com/caddyserver/nginx-adapter
+    github.com/caddyserver/nginx-adapter \
+    github.com/caddyserver/ntlm-transport
         
 FROM caddy:latest
 
