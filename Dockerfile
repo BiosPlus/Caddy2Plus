@@ -6,7 +6,17 @@ FROM caddy:builder AS builder
 RUN caddy-builder \
     github.com/caddy-dns/cloudflare \
     github.com/caddy-dns/gandi \
-    github.com/caddy-dns/route53
+    github.com/caddy-dns/route53 \
+    github.com/greenpau/caddy-auth-forms \
+    github.com/greenpau/caddy-auth-jwt \
+    github.com/greenpau/caddy-auth-saml \
+    github.com/abiosoft/caddy-exec \
+    github.com/abiosoft/caddy-hmac \
+    github.com/abiosoft/caddy-json-parse \
+    github.com/abiosoft/caddy-json-schema \
+    github.com/abiosoft/caddy-named-routes \
+    github.com/abiosoft/caddy-yaml \
+    github.com/caddyserver/cache-handler
         
 FROM caddy:latest
 
