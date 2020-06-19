@@ -30,7 +30,7 @@ RUN caddy-builder \
     #github.com/caddyserver/circuitbreaker \
     github.com/caddyserver/cue-adapter \
     github.com/caddyserver/format-encoder \
-    github.com/hairyhenderson/caddy-teapot-module \
+    #github.com/hairyhenderson/caddy-teapot-module \
     github.com/hairyhenderson/caddyprom
 
 FROM caddy:latest
