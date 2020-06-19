@@ -4,7 +4,7 @@
 FROM caddy:builder AS builder
 
 RUN caddy-builder \
-    #github.com/caddyserver/circuitbreaker \
+    #This addin has been removed from GH (2020/06/19) -> github.com/caddyserver/circuitbreaker \
     github.com/abiosoft/caddy-exec \
     github.com/abiosoft/caddy-hmac \
     github.com/abiosoft/caddy-json-parse \
@@ -29,7 +29,8 @@ RUN caddy-builder \
     github.com/hairyhenderson/caddy-teapot-module \
     github.com/hairyhenderson/caddyprom \
     github.com/iamd3vil/caddy_yaml_adapter \
-    github.com/learnaddict/chiot \
+    #This addin is empty (2020/06/19) -> github.com/learnaddict/chiot \
+    github.com/lucaslorentz/caddy-docker-proxy \
     github.com/mholt/caddy-dynamicdns \
     github.com/mholt/caddy-webdav \
     github.com/nwhirschfeld/client_cert_matcher \
