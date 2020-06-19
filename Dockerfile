@@ -17,7 +17,8 @@ RUN caddy-builder \
     github.com/abiosoft/caddy-named-routes \
     github.com/abiosoft/caddy-yaml \
     github.com/caddyserver/cache-handler \
-    github.com/caddyserver/circuitbreaker
+    github.com/caddyserver/circuitbreaker \
+    github.com/caddyserver/format-encoder
         
 FROM caddy:latest
 
