@@ -28,7 +28,7 @@ RUN caddy-builder \
     github.com/greenpau/caddy-auth-saml \
     github.com/hairyhenderson/caddy-teapot-module \
     github.com/hairyhenderson/caddyprom \
-    github.com/iamd3vil/caddy_yaml_adapter \
+    #This addin is broken (2020/06/19) -> github.com/iamd3vil/caddy_yaml_adapter \
     #This addin is empty (2020/06/19) -> github.com/learnaddict/chiot \
     github.com/lucaslorentz/caddy-docker-proxy \
     github.com/mholt/caddy-dynamicdns \
