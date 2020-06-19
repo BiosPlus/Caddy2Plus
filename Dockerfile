@@ -34,7 +34,8 @@ RUN caddy-builder \
     github.com/hairyhenderson/caddyprom \
     github.com/awoodbeck/caddy-toml-adapter \
     github.com/iamd3vil/caddy_yaml_adapter \
-    github.com/learnaddict/chiot
+    github.com/learnaddict/chiot \
+    github.com/lucaslorentz/caddy-docker-proxy
 
 FROM caddy:latest
 
