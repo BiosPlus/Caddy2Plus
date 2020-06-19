@@ -15,7 +15,8 @@ RUN caddy-builder \
     github.com/abiosoft/caddy-json-parse \
     github.com/abiosoft/caddy-json-schema \
     github.com/abiosoft/caddy-named-routes \
-    github.com/abiosoft/caddy-yaml
+    github.com/abiosoft/caddy-yaml \
+    github.com/caddyserver/cache-handler
         
 FROM caddy:latest
 
