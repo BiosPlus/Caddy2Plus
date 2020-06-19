@@ -20,7 +20,8 @@ RUN caddy-builder \
     github.com/caddyserver/circuitbreaker \
     github.com/caddyserver/format-encoder \
     github.com/caddyserver/forwardproxy \
-    github.com/caddyserver/json5-adapter
+    github.com/caddyserver/json5-adapter \
+    github.com/caddyserver/jsonc-adapter
         
 FROM caddy:latest
 
