@@ -24,7 +24,8 @@ RUN caddy-builder \
     github.com/caddyserver/jsonc-adapter \
     github.com/caddyserver/nginx-adapter \
     github.com/caddyserver/ntlm-transport \
-    github.com/mholt/caddy-dynamicdns
+    github.com/mholt/caddy-dynamicdns \
+    github.com/mholt/caddy-webdav
         
 FROM caddy:latest
 
