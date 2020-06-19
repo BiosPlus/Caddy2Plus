@@ -19,7 +19,8 @@ RUN caddy-builder \
     github.com/caddyserver/cache-handler \
     github.com/caddyserver/circuitbreaker \
     github.com/caddyserver/format-encoder \
-    github.com/caddyserver/forwardproxy
+    github.com/caddyserver/forwardproxy \
+    github.com/caddyserver/json5-adapter
         
 FROM caddy:latest
 
