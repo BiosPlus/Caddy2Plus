@@ -28,7 +28,9 @@ RUN caddy-builder \
     github.com/mholt/caddy-dynamicdns \
     github.com/mholt/caddy-webdav \
     #github.com/caddyserver/circuitbreaker \
-    github.com/caddyserver/cue-adapter    
+    github.com/caddyserver/cue-adapter \
+    github.com/caddyserver/format-encoder
+
 
 FROM caddy:latest
 
