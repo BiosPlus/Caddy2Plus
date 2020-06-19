@@ -18,7 +18,8 @@ RUN caddy-builder \
     github.com/abiosoft/caddy-yaml \
     github.com/caddyserver/cache-handler \
     github.com/caddyserver/circuitbreaker \
-    github.com/caddyserver/format-encoder
+    github.com/caddyserver/format-encoder \
+    github.com/caddyserver/forwardproxy
         
 FROM caddy:latest
 
