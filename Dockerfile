@@ -26,7 +26,10 @@ RUN caddy-builder \
     github.com/caddyserver/nginx-adapter \
     github.com/caddyserver/ntlm-transport \
     github.com/mholt/caddy-dynamicdns \
-    github.com/mholt/caddy-webdav
+    github.com/mholt/caddy-webdav \
+    github.com/iamd3vil/caddy_yaml_adapter \
+    github.com/learnaddict/chiot \
+    github.com/lucaslorentz/caddy-docker-proxy
         
 FROM caddy:latest
 
