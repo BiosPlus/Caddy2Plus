@@ -1,5 +1,6 @@
 # Caddy2Plus
 Fork of the latest non-beta Caddy v2 Docker image with plugins included in the build
+
 Rebuilt once per day @ 10am UTC
 
 ## Modules included:
