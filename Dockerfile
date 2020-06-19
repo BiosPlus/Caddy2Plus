@@ -27,8 +27,9 @@ RUN caddy-builder \
     github.com/caddyserver/ntlm-transport \
     github.com/mholt/caddy-dynamicdns \
     github.com/mholt/caddy-webdav \
-    github.com/caddyserver/circuitbreaker
-        
+    #github.com/caddyserver/circuitbreaker \
+    github.com/caddyserver/cue-adapter    
+
 FROM caddy:latest
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
