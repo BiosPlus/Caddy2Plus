@@ -31,7 +31,8 @@ RUN caddy-builder \
     github.com/caddyserver/cue-adapter \
     github.com/caddyserver/format-encoder \
     github.com/hairyhenderson/caddy-teapot-module \
-    github.com/hairyhenderson/caddyprom
+    github.com/hairyhenderson/caddyprom \
+    github.com/awoodbeck/caddy-toml-adapter
 
 
 FROM caddy:latest
