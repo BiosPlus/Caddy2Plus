@@ -1,5 +1,5 @@
 # Caddy2Plus
-Fork of the Caddy v2 Docker image with plugins included in the build
+Fork of the latest non-beta Caddy v2 Docker image with plugins included in the build
 
 ## Modules included:
 | Module source | Included? | What's the error? |
