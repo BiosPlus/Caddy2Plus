@@ -32,7 +32,8 @@ RUN caddy-builder \
     github.com/caddyserver/format-encoder \
     github.com/hairyhenderson/caddy-teapot-module \
     github.com/hairyhenderson/caddyprom \
-    github.com/awoodbeck/caddy-toml-adapter
+    github.com/awoodbeck/caddy-toml-adapter \
+    github.com/iamd3vil/caddy_yaml_adapter
 
 
 FROM caddy:latest
