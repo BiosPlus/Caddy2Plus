@@ -11,6 +11,7 @@ RUN caddy-builder \
     github.com/abiosoft/caddy-json-schema \
     github.com/abiosoft/caddy-named-routes \
     github.com/abiosoft/caddy-yaml \
+    github.com/awoodbeck/caddy-toml-adapter \
     github.com/caddy-dns/cloudflare \
     github.com/caddy-dns/gandi \
     github.com/caddy-dns/route53 \
@@ -32,7 +33,6 @@ RUN caddy-builder \
     github.com/nwhirschfeld/client_cert_matcher \
     github.com/sjtug/caddy2-filter \
     github.com/vrongmeal/caddygit
-
 
 FROM caddy:latest
 
