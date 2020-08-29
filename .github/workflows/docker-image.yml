@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag Caddy2Plus:$(date +%s)
+      run: docker build . --file Dockerfile --tag caddy2plus:$(date +%s)
