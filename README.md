@@ -4,6 +4,9 @@ Fork of the latest non-beta Caddy v2 Docker image with plugins included in the b
 
 Rebuilt once per day @ 10am UTC
 
+![Docker Image CI](https://github.com/BiosPlus/Caddy2Plus/workflows/Docker%20Image%20CI/badge.svg)
+
+
 ## Modules included:
 | Module source | Included? | What's the error? |
 |--|--|--|
