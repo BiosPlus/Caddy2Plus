@@ -26,7 +26,7 @@ github.com/caddyserver/json5-adapter | ✅ |
 github.com/caddyserver/jsonc-adapter | ✅ | 
 github.com/caddyserver/nginx-adapter | ✅ | 
 github.com/caddyserver/ntlm-transport | ✅ | 
-github.com/greenpau/caddy-auth-forms | ✅ | 
+github.com/greenpau/caddy-auth-portal | ✅ | 
 github.com/greenpau/caddy-auth-jwt | ✅ | 
 github.com/greenpau/caddy-auth-saml | ✅ | 
 github.com/hairyhenderson/caddy-teapot-module | ✅ | 
