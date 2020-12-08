@@ -20,7 +20,7 @@ RUN xcaddy build \
     --with github.com/caddyserver/ntlm-transport \
     --with github.com/chukmunnlee/caddy-openapi \
     --with github.com/francislavoie/caddy-hcl \
-    --with github.com/gamalan/caddy-tlsredis \
+#    --with github.com/gamalan/caddy-tlsredis (broken as of 8-12-2020)
     --with github.com/greenpau/caddy-auth-jwt \
     --with github.com/greenpau/caddy-auth-portal \
     --with github.com/greenpau/caddy-trace \
