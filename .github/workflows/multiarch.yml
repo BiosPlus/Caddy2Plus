@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 0 * * 2'
 jobs:
-  Build_Push_DockerHub:
+  Build_Push:
     runs-on: ubuntu-latest
     steps:
     -
@@ -31,7 +31,7 @@ jobs:
 
         echo ::set-output name=commit::${GITHUB_SHA}
         echo ::set-output name=build_date::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-        echo ::set-output name=docker_platforms::linux/amd64,linux/arm/v6
+        echo ::set-output name=docker_platforms::linux/arm/v6
         echo ::set-output name=docker_image::${{ secrets.DOCKER_USERNAME }}/caddy2plus
     -
       name: Set up QEMU
@@ -86,8 +86,8 @@ jobs:
       with:
         context: .
         file: ./Dockerfile
-        platforms: linux/amd64,linux/arm/v6
-        push: false
+        platforms: ${{ steps.prepare.outputs.docker_platforms }}
+        push: true
         build-args: |
             TAG=${{ steps.prepare.outputs.tag }}
             BRANCH=${{ steps.prepare.outputs.branch }}
