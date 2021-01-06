@@ -63,7 +63,7 @@ jobs:
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
           --build-arg "VCS_REF=${GITHUB_SHA::8}" \
-          --tag "caddy2plus:${{ steps.prepare.outputs.version }}" \
+          --tag "biosplus/caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
       name: Login to Registry (DockerHub)
@@ -79,7 +79,7 @@ jobs:
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
           --build-arg "VCS_REF=${GITHUB_SHA::8}" \
-          --tag "caddy2plus:${{ steps.prepare.outputs.version }}" \
+          --tag "biosplus/caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
       name: Login to Registry (Github Container Registry)
