@@ -23,6 +23,6 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.ACTION_TOKEN }}
-          registry: docker.pkg.github.com
+          registry: ghcr.io
           repository: biosplus/caddy2plus/latest
           tag_with_ref: true
