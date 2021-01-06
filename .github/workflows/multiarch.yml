@@ -22,7 +22,6 @@ jobs:
 
         echo ::set-output name=build_date::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
         echo ::set-output name=docker_platforms::linux/amd64
-      #,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le
         echo ::set-output name=docker_image::${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}
     -
       name: Set up QEMU
@@ -54,8 +53,7 @@ jobs:
         echo date=${{ steps.prepare.outputs.build_date }}
         echo image=${{ steps.prepare.outputs.docker_image }}
         echo platforms=${{ steps.prepare.outputs.docker_platforms }}
-        echo avail_platforms=linux/amd64 
-      #linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le
+        echo avail_platforms=linux/amd64
     - 
       name: Docker Buildx (no push)
       run: |
