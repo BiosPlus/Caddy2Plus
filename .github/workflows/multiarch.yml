@@ -96,12 +96,13 @@ jobs:
       run: |
         docker buildx build \
           --platform ${{ steps.prepare.outputs.docker_platforms }} \
-          --output "type=image,push=true" \
+          --output "type=image,push=false" \
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
           --build-arg "VCS_REF=${GITHUB_SHA::8}" \
           --tag "biosplus/caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
+        docker push ghcr.io/biosplus/caddy2plus:${{ steps.prepare.outputs.version }}
     -
       name: Logout of Github Container Registry
       run: |
