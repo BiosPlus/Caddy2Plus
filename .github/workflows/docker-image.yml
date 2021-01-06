@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Environment Preparation
-      id: Environment Preparation
+      id: Environment-Preparation
       run: |
         if [[ $GITHUB_REF == refs/tags/* ]]; then
           echo ::set-output name=version::${GITHUB_REF#refs/tags/v}
@@ -25,7 +25,7 @@ jobs:
         echo ::set-output name=docker_image::${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}
     -
       name: Set up QEMU
-      id: qemu
+      id: Qemu-Setup
       uses: docker/setup-qemu-action@v1
       with:
         image: tonistiigi/binfmt:latest
