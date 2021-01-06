@@ -1,7 +1,6 @@
 name: Docker Build Images
 on:
   push:
-    branches: [ master ]
   schedule:
     - cron '0 0 * * 2'
 jobs:
@@ -99,6 +98,10 @@ jobs:
           --build-arg "VCS_REF=${GITHUB_SHA::8}" \
           --tag "${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
+    -
+      name: Logout of Registry (Github Container Registry)
+      run: |
+        docker-logout ghcr.io
     - name: Clear
       if: always()
       run: |
