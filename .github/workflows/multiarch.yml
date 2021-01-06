@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 0 * * 2'
 jobs:
-  Build + Push Docker Image:
+  Build_Push_Docker_Image:
     runs-on: ubuntu-latest
     steps:
     - name: Prepare
