@@ -74,7 +74,7 @@ jobs:
       if: success()
       run: |
         docker buildx build \
-          --platform ${{ matrix.ARCH }} \
+          --platform ${{ steps.prepare.outputs.docker_platforms }} \
           --output "type=image,push=true" \
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
@@ -91,7 +91,7 @@ jobs:
       if: success()
       run: |
         docker buildx build \
-          --platform ${{ matrix.ARCH }} \
+          --platform ${{ steps.prepare.outputs.docker_platforms }} \
           --output "type=image,push=true" \
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
