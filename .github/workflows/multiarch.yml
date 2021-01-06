@@ -91,7 +91,7 @@ jobs:
         rm -f ${HOME}/.docker/config.json
         echo ${{ secrets.ACTION_TOKEN }} | docker login ghcr.io -u USERNAME --password-stdin
     - 
-      name: Docker Buildx (Push to Github Container Registry)
+      name: Docker Buildx (Push to Github Container Registry - ghcr.io)
       if: success()
       run: |
         docker buildx build \
