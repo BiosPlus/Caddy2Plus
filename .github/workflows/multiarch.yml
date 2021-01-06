@@ -66,7 +66,7 @@ jobs:
           --tag "biosplus/caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
-      name: Login to Registry (DockerHub)
+      name: Login to DockerHub
       run: |
         echo ${{ secrets.DOCKER_ACCESS_TOKEN }} | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
     - 
@@ -82,9 +82,13 @@ jobs:
           --tag "biosplus/caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
-      name: Login to Registry (Github Container Registry)
+      name: Logout of DockerHub
       run: |
-        docker-logout
+        rm -f ${HOME}/.docker/config.json
+    -
+      name: Login to Github Container Registry
+      run: |
+        rm -f ${HOME}/.docker/config.json
         echo ${{ secrets.ACTION_TOKEN }} | docker login ghcr.io -u USERNAME --password-stdin
     - 
       name: Docker Buildx (Push to Github Container Registry)
@@ -99,10 +103,11 @@ jobs:
           --tag "caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
-      name: Logout of Registry (Github Container Registry)
+      name: Logout of Github Container Registry
       run: |
-        docker-logout ghcr.io
-    - name: Clear
+        rm -f ${HOME}/.docker/config.json
+    - 
+      name: Clear
       if: always()
       run: |
         rm -f ${HOME}/.docker/config.json
