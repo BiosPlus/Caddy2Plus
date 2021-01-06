@@ -7,7 +7,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-    - name: Environment Preparation
+    - name: Prepare
       id: prepare
       run: |
         if [[ $GITHUB_REF == refs/tags/* ]]; then
@@ -25,7 +25,7 @@ jobs:
         echo ::set-output name=docker_image::${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}
     -
       name: Set up QEMU
-      id: qemu-Setup
+      id: qemu-setup
       uses: docker/setup-qemu-action@v1
       with:
         image: tonistiigi/binfmt:latest
@@ -63,7 +63,7 @@ jobs:
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
           --build-arg "VCS_REF=${GITHUB_SHA::8}" \
-          --tag "${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}" \
+          --tag "caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
       name: Login to Registry (DockerHub)
@@ -96,7 +96,7 @@ jobs:
           --build-arg "VERSION=${{ steps.prepare.outputs.version }}" \
           --build-arg "BUILD_DATE=${{ steps.prepare.outputs.build_date }}" \
           --build-arg "VCS_REF=${GITHUB_SHA::8}" \
-          --tag "${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}" \
+          --tag "caddy2plus:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile .
     -
       name: Logout of Registry (Github Container Registry)
