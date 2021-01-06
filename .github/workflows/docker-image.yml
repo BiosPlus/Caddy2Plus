@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Environment Preparation
-      if: Environment Preparation
+      id: Environment Preparation
       run: |
         if [[ $GITHUB_REF == refs/tags/* ]]; then
           echo ::set-output name=version::${GITHUB_REF#refs/tags/v}
