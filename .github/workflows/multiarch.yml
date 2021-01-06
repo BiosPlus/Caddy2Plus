@@ -55,17 +55,6 @@ jobs:
     -
       name: Avilable Platforms
       run: echo ${{ steps.buildx.outputs.platforms }}
-    - 
-      name: Current Environment
-      run: |
-        echo home=$HOME
-        echo git_ref=$GITHUB_REF
-        echo git_sha=$GITHUB_SHA
-        echo version=${{ steps.prepare.outputs.version }}
-        echo date=${{ steps.prepare.outputs.build_date }}
-        echo image=${{ steps.prepare.outputs.docker_image }}
-        echo platforms=${{ steps.prepare.outputs.docker_platforms }}
-        echo avail_platforms=linux/amd64,linux/arm/v6
     -
       name: Login to DockerHub Container Registry
       uses: docker/login-action@v1
