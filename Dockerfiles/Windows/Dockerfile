@@ -1,7 +1,7 @@
 #Referencing this list https://caddy.community/t/list-of-caddy-2-modules/7839
 #Thanks to SlothCroissant for the initial breakdown on how to do this.
 
-FROM caddy:builder AS builder
+FROM caddy:builder-windowsservercore-1809 AS builder
 
 RUN xcaddy build \
     --with github.com/abiosoft/caddy-exec \
