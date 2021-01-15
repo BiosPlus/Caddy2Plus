@@ -2,25 +2,24 @@ name: Docker Build Images
 on:
   push:
   schedule:
-    - cron: '0 0 * * 2'
+    - cron: "0 0 * * 2"
 jobs:
   Windows_Arch:
     runs-on: ubuntu-latest
     steps:
-    - name: Install Go
-    - uses: actions/checkout@v2
-    - uses: actions/setup-go@v2
-      with:
-        go-version: '^1.15.6' # The Go version to download
-    - run: go version
-
+      - name: Install Go
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: "^1.15.6" # The Go version to download
+      - run: go version
   # Linux_MultiArch:
   #   runs-on: ubuntu-latest
   #   steps:
   #   -
   #     name: Checkout
-  #     uses: actions/checkout@v2 
-  #   - 
+  #     uses: actions/checkout@v2
+  #   -
   #     name: Prepare
   #     id: prepare
   #     run: |
@@ -38,7 +37,6 @@ jobs:
   #       else
   #         echo ::set-output name=branch::${GITHUB_REF#refs/heads/}
   #       fi
-
   #       echo ::set-output name=commit::${GITHUB_SHA}
   #       echo ::set-output name=build_date::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
   #       echo ::set-output name=docker_platforms::linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le
@@ -59,7 +57,7 @@ jobs:
   #       key: ${{ runner.os }}-buildx-${{ github.sha }}
   #       restore-keys: |
   #         ${{ runner.os }}-buildx-
-  #   - 
+  #   -
   #     name: Builder instance name
   #     run: echo ${{ steps.buildx.outputs.name }}
   #   -
@@ -78,7 +76,7 @@ jobs:
   #       registry: ghcr.io
   #       username: ${{ github.repository_owner }}
   #       password: ${{ secrets.ACTION_TOKEN }}
-  #   - 
+  #   -
   #     name: Docker Build
   #     id: docker_build_test
   #     uses: docker/build-push-action@v2
