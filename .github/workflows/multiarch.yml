@@ -21,8 +21,8 @@ jobs:
         else
           echo ::set-output name=tag::${GITHUB_REF#refs/heads/}
         fi
-        if [[ $GITHUB_REF == refs/tags/*-beta ]]; then
-          echo ::set-output name=branch::beta
+        if [[ $GITHUB_REF == refs/tags/develop ]]; then
+          echo ::set-output name=branch::develop
         elif [[ $GITHUB_REF == refs/tags/* ]]; then
           echo ::set-output name=branch::master
         else
